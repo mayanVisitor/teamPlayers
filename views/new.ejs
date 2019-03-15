@@ -1,0 +1,21 @@
+<% include partials/header %>
+<br>
+    <div class="ui huge header">Enter a New Team:</div>
+
+
+<form action="/teams" method="POST">
+    <br>
+    
+<label for="city">City:</label>
+<input name="city" type="text" placeholder="Enter city"></input>
+
+<label for="name">Team:</label>
+<input name="name" type="text" placeholder="Enter name"></input>
+
+
+<input type="submit" value="Submit"></input>
+</form>
+</div>
+
+
+<% include partials/footer %>

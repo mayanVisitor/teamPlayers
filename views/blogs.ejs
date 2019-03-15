@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<h1>Welcome to the Blogs page!</h1>
+<li>
+
+<% allBlogs.forEach((blog)=>{ %>
+   <ul> <%= blog %>  </ul> 
+<% }); %>
+
+</li>
+
+<a href="/index/new"> You can even add more! </a>
+
+<% include partials/footer %>

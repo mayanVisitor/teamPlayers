@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+
+<h1>Welcome to the Teams page!</h1>
+
+<br>
+<div class="row">
+    <% allTeams.forEach((team)=>{ %>
+        <div class = "col-md-3 col-sm-6">
+        <img src = "https://pbs.twimg.com/profile_images/976648863099641858/pNOSI0wz_400x400.jpg">
+        <% var mem= team.members.length; %>
+            <% if(mem=0){ %>
+                <p>The <div class="city"><%= team.city%></div>  <div class="name"><%= team.name %></div> have no members.</p>
+            <% }else{ %>
+                <p>The <%= team.city%>  <%= team.name %> have <%= mem %> members.</p>
+                <a href="/teams/<%= team._id %>">Show team members </a>
+<% } %>
+        </div>
+
+        
+    <% }); %>
+</div>
+
+<a href="/teams/new"> Add more teams </a>
+
+<% include partials/footer %>
